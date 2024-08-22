@@ -2,7 +2,7 @@
  * main.c
  *
  *  Created on: Aug 16, 2024
- *      Author: !?
+ *      Author: Hager Khaled
  */
 
 
@@ -12,7 +12,7 @@
 #include <avr/io.h>
 
 char key_pad_GETKey(void){
-    char key='a';    // ÊÑÌÚ áí ÇáÒÑÇÑ ÇáãÏÇÓ
+    char key='a';    // ÃŠÃ‘ÃŒÃš Ã¡Ã­ Ã‡Ã¡Ã’Ã‘Ã‡Ã‘ Ã‡Ã¡Ã£ÃÃ‡Ã“
 
 
          PORTD= 0b00001110;  // col 1
@@ -124,7 +124,7 @@ int main()
 {
   DDRC= 0x00; // INPUT
   DDRD=0x0f;   //out
-  DDRA= 0x0f;  //   pullup Çæá 4 out
+  DDRA= 0x0f;  //   pullup Ã‡Ã¦Ã¡ 4 out
 
   char res;
   while(1)
@@ -133,7 +133,7 @@ int main()
     if (res>=0 && res<=9)
     {
     	seg_display(res);
-    	 while( key_pad_GETKey()!= 'a');  //ÈíÓÊäÇäí áÍÏ ÇãÇ ÇÔíá ÇíÏí
+    	 while( key_pad_GETKey()!= 'a');  //ÃˆÃ­Ã“ÃŠÃ¤Ã‡Ã¤Ã­ Ã¡ÃÃ Ã‡Ã£Ã‡ Ã‡Ã”Ã­Ã¡ Ã‡Ã­ÃÃ­
 
     }
 
